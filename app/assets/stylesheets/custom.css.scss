@@ -1,0 +1,299 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*mixins*/
+
+@mixin box_sizing{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* gravatar image size */
+
+
+body{
+	padding-bottom: 70px;
+}
+/*typography*/
+h1{
+	line-height: -1px;
+	font-size: 2em;
+	letter-spacing: -2px;
+	margin-bottom:30px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+}
+h3{
+	line-height: -1px;
+	font-size: 1.5em;
+	font-weight:bold;
+	color: #fff;
+}
+h4{
+	line-height: -1px;
+	font-size: 1.2em;
+	letter-spacing:  -2px;
+	color: #fff;
+}
+#title_home{
+	font-size: 1.8em;
+	font-weight: bold;
+
+}
+.pics{
+	margin-top:80px;
+}
+#horizon{
+	height:250px;
+	width:450px;
+}
+h2{
+	line-height: 1;
+	font-size:1.2em;
+	letter-spacing: -1px;
+	margin-bottom:30px;
+	text-align: center;
+	font-weight: normal;
+	color:#777;
+}
+body{
+	background-image: image-url("red.jpg");
+}
+.debug_dump{
+	clear:both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
+}
+
+.navbar-brand{
+	font-weight: bold;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.navbar-header{
+	margin-left: 50px;
+}
+.nav.navbar-nav.navbar-right{
+	margin-right: 50px;
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: bold;
+}
+.row{
+	color: #000000;
+}
+.nav{
+	color: #fff;
+}
+#sign_up{
+	margin-top: 10px;
+	float: right;
+}
+.btn.btn-primary{
+	margin-top:10px;
+	float: right;
+}
+.btn.btn-default.navbar-btn{
+	font-weight: bold;
+}
+/*
+.container-fuild{
+	display:block;
+	margin-top: -1px;
+	padding-top: 9px;
+}
+.dropdown-toggle{
+	font-size: 1.7em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-family: sans-serif;
+	font-weight: bold;
+	&:hover{
+		color: #fff;
+		text-decoration: none;
+	}
+
+}
+*/
+/*footer*/
+.footer{
+	color: #fff;
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	font-weight: bold;
+	small{
+		float: left;
+		color: #fff;
+	}
+	a{
+		color: #fff;
+	}
+	li{
+		float: left;
+		margin-left: 30px;
+		padding-left: 20px;
+	}
+	ul{
+		float: right;
+		list-style: none;
+	}
+}
+/* forms*/
+
+#error_explanation{
+  color: red;
+  margin-top: 20px;
+  font-style: italic;
+  ul{
+    color: red;
+    margin:0 0 20px 0;
+  }
+
+}
+/* CSS's pre-defined function */
+.field_with_errors{
+  /* sass's pre-defined function */
+ @extend .has-error;
+ .form-control{
+   color: $state-danger-text;
+ }
+}
+aside{
+  section.user_info{
+    margin-top: 20px;
+  }
+  section{
+    padding: 10px;
+    margin-top: 20px;
+    &:first-child{
+      border: 0;
+      padding-top: 0;
+    }
+    span{
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1{
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+/* checkbox */
+.checkbox{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	span{
+		margin-left: 20px;
+		font-weight: bold;
+	}
+}
+.nav{
+	em{
+		font-weight: bolder;
+	}
+}
+
+#session_remember_me{
+	width: auto;
+	margin-left: 0;
+}
+.gravatar_edit{
+	margin-top : 40px;
+	font-weight: bold;
+}
+.users{
+	list-style:none;
+	margin: 0;
+	li{
+		overflow: auto;
+		padding: 15px 0;
+		border-bottom: 1px solid $gray-lighter;
+		font-weight: bold;
+		color: #fff;
+	}
+}
+.gravatar{
+	border-radius: 50% 50% 50% 50%;
+	border: 1px solid #DDDDDD;
+	padding: 4px;
+	background-color: #F5F5F5;
+	size: 50;
+
+}
+/* Microposts */
+.microposts{
+	list-style: none;
+	padding: 0;
+	li{
+		padding: 10px 0;
+		border-top: 1px solid #eaeaea;
+	}
+	.user{
+		margin-top: 5em;
+		padding-top: 0;
+	}
+	.content{
+		display: block;
+		margin-left: 60px;
+		color: #ffffff;
+
+		img{
+			display: block;
+			padding: 5px 0;
+		}
+	}
+	.timestamp{
+		color: #eaeaea;
+		display: block;
+		margin-left: 60px;
+	}
+}
+
+
+aside{
+	textarea{
+		height: 100px;
+		margin-bottom: 5px;
+	}
+}
+span.picture{
+	margin-top: 10px;
+	input{
+		border: 0;
+	}
+}
+.home_button{
+	float: left;
+	margin-bottom: 20px;
+}
+.field{
+	font-style: italic;
+}
+
+.user_avatars{
+	overflow: auto;
+	margin-top: 10px;
+	.gravatar{
+		margin: 1px 1px;
+	}
+	a{
+		padding: 0;
+	}
+}
+
+.users.follow{
+	padding: 0;
+}

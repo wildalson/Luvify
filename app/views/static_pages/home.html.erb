@@ -1,0 +1,44 @@
+<% provide(:title, "Home") %>
+<h1> Home </h1>
+<% if !logged_in? %>
+	<div class="row">
+		<aside class="col-md-4">
+			<section class="user_info">
+				<%= render 'shared/user_info'%>
+			</section>
+			<section class="stats">
+				<%= render 'shared/stats'%>
+			</section>
+			<section class="micropost_form">
+				<%= render 'shared/micropost_form' %>
+			</section>
+		</aside>
+		<div class="col-md-8">
+			<h3>Micropost Feed</h3>
+			<%= render 'shared/feed'%>
+		</div>
+	</div>
+<%end%>
+<%else%>
+	<div class="center jumbotron">
+	<h2> 
+		<p id:"title_home">Welcome to Blogging for Fun</p>
+		<p> This website allows you to create and share blogs around the world!</p>
+		<p id="sign_button"><%= link_to "Sign Up", signup_path, class:"btn btn-default navbar-btn"%></p>
+	</h2>
+	</div>
+	<div class="pics">
+	<div class="row">
+		<div class="col-md-5">
+			<%= link_to image_tag("horizon.jpg", id:"horizon") %>
+		</div>
+		<div class="col-md-7">
+			<h3> Beyond the Horizon </h3>
+			<h4> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAs far as symbolism goes, the horizon is both a source of inspiration and frustratingly unattainable. It looks different in every part of the world, yet is iconic to most every culture. This week we asked our readers to submit photos of their horizons for the Mashable Photo Challenge. This challenge showed us how far across the earth our readers range, with submissions from destinations like Tokyo, Croatia and New York City. Photos focused on shared themes, such as sunsets, skies and open bodies of water. </h4>
+        	</div>
+  	</div>
+		</div>
+	</div>
+	</div>
+
+
